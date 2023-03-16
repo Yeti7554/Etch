@@ -17,6 +17,9 @@ for (let i = 0; i < 16; i++) {
       const cell = document.createElement("div");
       cell.classList.add("cell");
       cell.style.width="20px";
+      cell.addEventListener("mouseover", () =>{
+        cell.style.backgroundColor="black";
+      });
       row.appendChild(cell);
 
     }
@@ -25,3 +28,8 @@ for (let i = 0; i < 16; i++) {
     board.appendChild(row);
   }
 
+  
+
+  // now need to add prompt for dimensions
+  // variable that changes dimensions - though iterations and height and width
+  // need to add event listener to change div colour
