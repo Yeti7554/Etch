@@ -20,6 +20,10 @@ for (let i = 0; i < 16; i++) {
     row.classList.add("row");
     row.style.height="20px";
 
+    function resetBoard() {
+      row.style.backgroundColor="white";
+    };
+
     // Create 16 cells and append them to the row
     for (let j = 0; j < 16; j++) {
       const cell = document.createElement("div");
@@ -28,11 +32,21 @@ for (let i = 0; i < 16; i++) {
       cell.addEventListener("mouseover", boxColor);
       row.appendChild(cell);
 
+      
     }
+
+   
+
     
     // Append the row to the board
     board.appendChild(row);
+
   }
+
+  function resetBoard() {
+    row.style.backgroundColor="white";
+  }
+  
 
 
 
@@ -43,3 +57,5 @@ for (let i = 0; i < 16; i++) {
   function changeColour(choice) {
     colour = choice;
   }
+
+ 
